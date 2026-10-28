@@ -1,0 +1,12 @@
+name: CI/CD
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-stage:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy application
+        run: echo "build finished"
